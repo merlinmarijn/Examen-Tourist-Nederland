@@ -8,17 +8,19 @@ public class CameraSwapper : MonoBehaviour
 
     private bool PlayerCamera = true;
 
+    CameraTrigger CT;
+
     // Start is called before the first frame update
     void Start()
     {
         animator = GetComponent<Animator>();
     }
 
-    private void SwitchCamera()
+    public void SwitchCamera()
     {
         if (PlayerCamera)
         {
-            animator.Play("Puzzle");
+            animator.Play(CT.CameraID);
         } else
         {
             animator.Play("Player");
@@ -32,6 +34,14 @@ public class CameraSwapper : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.E)){
             SwitchCamera();
         }
+    }
 
+    public void AssignCameraTrigger(CameraTrigger ct = null)
+    {
+        CT = ct;
+        if (!PlayerCamera)
+        {
+            SwitchCamera();
+        }
     }
 }
