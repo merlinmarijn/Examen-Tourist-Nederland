@@ -8,15 +8,17 @@ public class RunnerPlayerStats : MonoBehaviour
     float ScoreMult = 1;
     [SerializeField]
     int Score = 0;
+    [SerializeField]
+    TextMesh ScoreText;
 
     private void Start()
     {
-        InvokeRepeating("ContinuousScore", 0, 5);
+        InvokeRepeating("ContinuousScore", 2.5f, 2.5f);
     }
 
     private void Update()
     {
-
+        ScoreText.text = "Score: " + Score.ToString();
     }
 
 

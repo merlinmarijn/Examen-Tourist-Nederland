@@ -5,6 +5,7 @@ public class PlayerController : MonoBehaviour
 {
     public CharacterController controller;
     public Transform cam;
+    public GameObject VFX;
 
     public float speed = 6f;
 
@@ -34,5 +35,6 @@ public class PlayerController : MonoBehaviour
             Vector3 moveDir = Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward;
             controller.Move(moveDir.normalized * speed * Time.deltaTime);
         }
+        VFX.GetComponent<Animator>().SetBool("Idle", (horizontal==0&&vertical== 0) ? true : false);
     }
 }
