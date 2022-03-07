@@ -426,3 +426,15 @@ AssetImportParameters requested are different than current active one (requested
   custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 285.922039 seconds.
+  path: Assets/Materials
+  artifactKey: Guid(a2d0c5ef6f3fee248aadf8660d374c1e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials using Guid(a2d0c5ef6f3fee248aadf8660d374c1e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f1bab6917fb0cd81cc5fc690fabe6f56') in 0.009253 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 4.135351 seconds.
+  path: Assets/Textures
+  artifactKey: Guid(558e129e21a16624eb47ceb41b844bd5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures using Guid(558e129e21a16624eb47ceb41b844bd5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6bf80fc07155debb16807cae672dc3a7') in 0.006575 seconds 
