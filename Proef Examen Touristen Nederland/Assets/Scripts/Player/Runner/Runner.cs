@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Runner : MonoBehaviour
 {
+    float moveSpeed = 6;
     // Start is called before the first frame update
     void Start()
     {
@@ -13,6 +14,7 @@ public class Runner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        transform.position += Vector3.forward * moveSpeed * Time.deltaTime;
+
     }
 }

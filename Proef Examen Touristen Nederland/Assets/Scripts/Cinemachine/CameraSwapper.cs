@@ -14,16 +14,20 @@ public class CameraSwapper : MonoBehaviour
     void Start()
     {
         animator = GetComponent<Animator>();
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
     public void SwitchCamera()
     {
-        if (PlayerCamera)
+        if (!PlayerCamera)
+        {
+            animator.Play("Player");
+        } else if(CT!=null)
         {
             animator.Play(CT.CameraID);
         } else
         {
-            animator.Play("Player");
+            return;
         }
         PlayerCamera = !PlayerCamera;
     }
