@@ -5,11 +5,19 @@ using UnityEngine;
 public class DoorTrigger : MonoBehaviour
 {
     bool PlayerInRange = false;
+    [SerializeField]
+    bool InstantActive = false;
+    [SerializeField]
+    int DoorSceneID;
     private void OnTriggerEnter(Collider other)
     {
         if(other.transform.tag == "Player")
         {
             PlayerInRange=true;
+            if (InstantActive)
+            {
+                GameObject.FindGameObjectWithTag("LevelLoader").GetComponent<LevelLoader>().LoadScene(DoorSceneID);
+            }
         }
     }
 
@@ -25,7 +33,7 @@ public class DoorTrigger : MonoBehaviour
     {
         if (PlayerInRange&&Input.GetKeyDown(KeyCode.E))
         {
-            Debug.Log("Entered Door");
+            GameObject.FindGameObjectWithTag("LevelLoader").GetComponent<LevelLoader>().LoadScene(DoorSceneID);
         }
     }
 }
