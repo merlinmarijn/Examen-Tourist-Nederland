@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5912116011470235880}
   - component: {fileID: 184296465}
   m_Layer: 7
-  m_Name: Car
+  m_Name: Car 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -61,7 +61,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: e8d7f659dd561b540a2a38b9fb57918f, type: 2}
+  - {fileID: 2100000, guid: 9428cd2c0e5693f48b9cb2d96986b4ab, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
