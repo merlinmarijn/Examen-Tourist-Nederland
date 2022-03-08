@@ -12,6 +12,12 @@ public class Runner : MonoBehaviour
 
     public float turnSmoothTime = 0.1f;
     float _turnSmoothVelocity;
+
+    bool isJumping;
+    bool isGrounded;
+
+    [SerializeField]
+    Vector3 RaycastOffset;
     // Start is called before the first frame update
     void Start()
     {
@@ -35,5 +41,19 @@ public class Runner : MonoBehaviour
             controller.Move(moveDir.normalized * speed * Time.deltaTime);
         }
         VFX.GetComponent<Animator>().SetBool("Idle", (horizontal==0&&vertical == 0) ? true : false);
+
+        RaycastHit hit;
+
+        if(Physics.Raycast(controller.transform.position + RaycastOffset, controller.transform.TransformDirection(Vector3.down), out hit, 1f))
+        {
+            Debug.DrawRay(controller.transform.position + RaycastOffset, controller.transform.TransformDirection(Vector3.down) * hit.distance, Color.yellow);
+            if (hit.transform.gameObject.layer == 6)
+            {
+                VFX.GetComponent<Animator>().SetBool("isJumping", false);
+            } else
+            {
+                VFX.GetComponent<Animator>().SetBool("isJumping", true);
+            }
+        }
     }
 }
