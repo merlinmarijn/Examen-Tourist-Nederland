@@ -161,9 +161,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 8978032253641832223, guid: 0b20546f67d47dd4ebf4de42fd764182, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8978032254149929425, guid: 0b20546f67d47dd4ebf4de42fd764182, type: 3}
       propertyPath: m_Name
       value: '[Trigger] Door'
+      objectReference: {fileID: 0}
+    - target: {fileID: 8978032254149929426, guid: 0b20546f67d47dd4ebf4de42fd764182, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8978032254149929427, guid: 0b20546f67d47dd4ebf4de42fd764182, type: 3}
       propertyPath: m_RootOrder
@@ -1456,6 +1464,7 @@ MonoBehaviour:
   VFX: {fileID: 919132148526968418}
   speed: 6
   turnSmoothTime: 0.1
+  RaycastOffset: {x: 0, y: 0, z: 0}
 --- !u!4 &4265377701930183001
 Transform:
   m_ObjectHideFlags: 0
