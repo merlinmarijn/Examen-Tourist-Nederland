@@ -13,6 +13,8 @@ public class Frogger : MonoBehaviour
 
     private Vector3 spawnPosition;
 
+    public GameObject InfoSign;
+
     private void Awake()
     {
         spawnPosition = transform.position;
@@ -68,7 +70,8 @@ public class Frogger : MonoBehaviour
 
         if (winning.Length > 0)
         {
-            Won();
+            InfoSign.SetActive(true);
+            Invoke(nameof(Won), 5f);
         }
 
         else
@@ -103,6 +106,7 @@ public class Frogger : MonoBehaviour
         StopAllCoroutines();
 
         transform.rotation = Quaternion.identity;
+        isMoving = false;
         enabled = false;
         Debug.LogError("Death");
 

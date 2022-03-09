@@ -13,6 +13,7 @@ public class damControl : MonoBehaviour
     public float waterLevel;
     public float countDown;
 
+    public GameObject infoSign;
     void Start()
     {
         waterLevel = 0f;
@@ -40,8 +41,11 @@ public class damControl : MonoBehaviour
         if (waterLevel <= -3 || waterLevel >= 3)
             GameOver();
 
-        if (countDown <= 0)
-            GameWon();
+        if (countDown <= 0) 
+        { 
+            infoSign.SetActive(true); 
+            Invoke(nameof(GameWon), 5f);
+        }
         else
             countDown -= 1f * Time.deltaTime;
 
