@@ -227,7 +227,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8978032254149929428, guid: 0b20546f67d47dd4ebf4de42fd764182, type: 3}
       propertyPath: DoorSceneID
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8978032254149929428, guid: 0b20546f67d47dd4ebf4de42fd764182, type: 3}
       propertyPath: InstantActive
